@@ -42,7 +42,8 @@ architecture releases from the public tree and reachable Git history.
   probes could still read unreachable old object SHAs. That repository was immediately
   returned to `PRIVATE` and renamed `qiuranke99/TCIS-pre-public-archive`.
 - The public repository was then created with a new GitHub repository identity and received
-  only the clean V3 history. The displaced old SHAs return 404 at the public repository.
+  only the clean V3 history. Anonymous commit probes for the displaced old SHAs return
+  `422 / No commit found` and cannot read those objects from the public repository.
 - Pre-public history bundle and current local client-state archive were created and
   independently verified outside the public repository.
 
