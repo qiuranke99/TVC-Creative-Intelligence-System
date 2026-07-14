@@ -1,6 +1,6 @@
 # TCIS V3-Only Public Repository Release
 
-Status: RELEASE_CANDIDATE
+Status: COMPLETE
 Date: 2026-07-14
 Owner: Creative Lead main thread
 
@@ -23,7 +23,7 @@ architecture releases from the public tree and reachable Git history.
 - Require full tests, Runtime surfaces, manifest verification, remote-ref audit, anonymous
   public metadata access, and a fresh public clone before completion.
 
-## Candidate evidence
+## Outcome and evidence
 
 - Managed public files: 170.
 - Full Node suite: 121/121 PASS.
@@ -33,6 +33,13 @@ architecture releases from the public tree and reachable Git history.
 - Standalone verifier: PASS.
 - Superseded TCIS release files in candidate public tree: 0.
 - Live client task files in candidate public tree and manifest: 0.
+- Clean-history root commit: `3fbdc2716402ae7f55309e8d2112157401b3f867`, with no parent.
+- Advertised remote refs after history replacement: 1 (`refs/heads/main`).
+- GitHub repository: `qiuranke99/TVC-Creative-Intelligence-System`.
+- Visibility: `PUBLIC`; anonymous GitHub API request returned HTTP 200 with
+  `private=false`, `visibility=public`, and default branch `main`.
+- Pre-public history bundle and current local client-state archive were created and
+  independently verified outside the public repository.
 
-Final GitHub name, visibility, clean-history ref audit, and anonymous-clone evidence remain
-required before this record can become COMPLETE.
+The final fresh-clone audit is required to reconfirm these properties after this completion
+record is pushed.
