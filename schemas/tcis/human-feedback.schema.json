@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/human-feedback.schema.json",
+  "title": "TCIS Human Feedback",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "project_id", "feedback_id", "packet_id", "action", "decision_owner", "comment"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "feedback_id": { "type": "string", "minLength": 1 },
+    "packet_id": { "type": "string", "minLength": 1 },
+    "action": { "enum": ["SELECT", "ADVISE", "NONE", "REVISE", "REOPEN", "STOP", "LOCK"] },
+    "decision_owner": { "type": "string", "minLength": 1 },
+    "selected_option_id": { "type": ["string", "null"] },
+    "confirmed_artifact_hash": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "comment": { "type": "string", "minLength": 1 }
+  }
+}
+

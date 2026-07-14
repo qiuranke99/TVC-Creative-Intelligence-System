@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/project.schema.json",
+  "title": "TCIS Project",
+  "type": "object",
+  "required": ["schema_version", "project_id", "title", "scope_mode", "production_mode", "current_stage", "status", "revision", "created_at", "updated_at"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "pattern": "^(?!.*\\.\\.)(?!.*[. ]$)[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "scope_mode": { "enum": ["single_tvc", "campaign_system", "existing_platform_expression", "social_native", "version_system", "direct_response_or_offer", "brand_film", "product_demo"] },
+    "production_mode": { "enum": ["live_action", "animation", "vfx_first", "ai_native", "hybrid", "director_led"] },
+    "current_stage": { "enum": ["P0_BRIEF_ALIGNMENT", "P1_DIAGNOSIS", "P2_COMMUNICATIONS_STRATEGY", "P3_CREATIVE_BRIEF", "P4_CREATIVE_ROUTES", "P5_CORE_CREATIVE_DECISION", "P6_TVC_EXPRESSION", "P7_SCRIPT_AGENCY_BOARD", "P8_VISUAL_PREDEVELOPMENT", "P9_PRODUCTION_PITCH", "P10_DIRECTOR_TREATMENT_AWARD", "P11_PREPRODUCTION_PPM", "P12_PRODUCTION_SELECTS", "P13_OFFLINE_LOCK", "P14_FINAL_RELEASE"] },
+    "status": { "enum": ["ACTIVE", "STOPPED", "COMPLETE"] },
+    "revision": { "type": "integer", "minimum": 0 },
+    "active_artifact_id": { "type": ["string", "null"], "pattern": "^(?!.*\\.\\.)(?!.*[. ]$)[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$" },
+    "created_at": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$" },
+    "updated_at": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$" }
+  },
+  "additionalProperties": true
+}

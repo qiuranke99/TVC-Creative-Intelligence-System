@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/claim-right.schema.json",
+  "title": "TCIS Claim Or Right",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": ["schema_version", "record_type", "project_id", "claim_id", "kind", "text", "evidence_status", "clearance_status", "evidence_refs", "clearance_refs"],
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "record_type": { "const": "CLAIM" },
+        "project_id": { "type": "string", "minLength": 1 },
+        "claim_id": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["EXPRESS", "IMPLIED"] },
+        "text": { "type": "string", "minLength": 1 },
+        "evidence_status": { "enum": ["UNASSESSED", "SUPPORTED", "LIMITED", "CONTRADICTED"] },
+        "clearance_status": { "enum": ["NOT_ASSESSED", "PENDING", "CLEARED", "BLOCKED", "NOT_APPLICABLE"] },
+        "evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "clearance_refs": { "type": "array", "items": { "type": "string" } }
+      },
+      "allOf": [
+        { "if": { "properties": { "evidence_status": { "const": "SUPPORTED" } } }, "then": { "properties": { "evidence_refs": { "minItems": 1 } } } },
+        { "if": { "properties": { "clearance_status": { "const": "CLEARED" } } }, "then": { "properties": { "evidence_status": { "const": "SUPPORTED" }, "clearance_refs": { "minItems": 1 } } } }
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": ["schema_version", "record_type", "project_id", "right_id", "subject", "clearance_status", "usage", "clearance_refs"],
+      "properties": {
+        "schema_version": { "const": "1.0.0" },
+        "record_type": { "const": "RIGHT" },
+        "project_id": { "type": "string", "minLength": 1 },
+        "right_id": { "type": "string", "minLength": 1 },
+        "subject": { "type": "string", "minLength": 1 },
+        "clearance_status": { "enum": ["NOT_ASSESSED", "PENDING", "CLEARED", "BLOCKED", "NOT_APPLICABLE"] },
+        "usage": { "type": "array", "items": { "type": "string" } },
+        "clearance_refs": { "type": "array", "items": { "type": "string" } }
+      },
+      "allOf": [
+        { "if": { "properties": { "clearance_status": { "const": "CLEARED" } } }, "then": { "properties": { "usage": { "minItems": 1 }, "clearance_refs": { "minItems": 1 } } } }
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

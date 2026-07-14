@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/lock-record.schema.json",
+  "title": "TCIS Artifact Lock Record",
+  "type": "object",
+  "x-tcis-lockSignoffs": true,
+  "additionalProperties": true,
+  "required": ["schema_version", "project_id", "lock_id", "packet_id", "prior_feedback_id", "artifact_id", "artifact_version", "artifact_hash", "stage", "confirmed_by", "confirmed_at", "signoffs"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "lock_id": { "type": "string", "minLength": 1 },
+    "packet_id": { "type": "string", "minLength": 1 },
+    "prior_feedback_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "artifact_version": { "type": "integer", "minimum": 1 },
+    "artifact_hash": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "stage": { "enum": ["P0_BRIEF_ALIGNMENT", "P1_DIAGNOSIS", "P2_COMMUNICATIONS_STRATEGY", "P3_CREATIVE_BRIEF", "P4_CREATIVE_ROUTES", "P5_CORE_CREATIVE_DECISION", "P6_TVC_EXPRESSION", "P7_SCRIPT_AGENCY_BOARD", "P8_VISUAL_PREDEVELOPMENT", "P9_PRODUCTION_PITCH", "P10_DIRECTOR_TREATMENT_AWARD", "P11_PREPRODUCTION_PPM", "P12_PRODUCTION_SELECTS", "P13_OFFLINE_LOCK", "P14_FINAL_RELEASE"] },
+    "confirmed_by": { "type": "string", "minLength": 1 },
+    "confirmed_at": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$" },
+    "signoffs": {
+      "type": "array",
+      "x-tcis-uniqueBy": "type",
+      "items": {
+        "type": "object",
+        "required": ["type", "status", "reference_id"],
+        "properties": {
+          "type": { "enum": ["CLIENT_DECISION", "STRATEGY", "CREATIVE", "CLAIMS", "RIGHTS", "PRODUCTION", "TECHNICAL_QC", "RELEASE"] },
+          "status": { "enum": ["APPROVED", "CLEARED", "NOT_APPLICABLE", "PENDING", "BLOCKED"] },
+          "reference_id": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

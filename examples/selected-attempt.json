@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "example-project",
+  "attempt_id": "attempt_example_001",
+  "artifact_id": "artifact_production_selects_v1",
+  "status": "SELECTED",
+  "tool": "codex_native_imagegen",
+  "request_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "reference_ids": ["reference_product_lock_v1"],
+  "output_path": "media/attempt_example_001.png",
+  "output_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "inspection": {
+    "passed": true,
+    "inspector": "creative_lead",
+    "checks": ["actual_file_seen", "product_identity_checked", "copy_checked"],
+    "limitations": ["Synthetic example; no real product or rights clearance"]
+  },
+  "selected_by": "client_creative_owner"
+}

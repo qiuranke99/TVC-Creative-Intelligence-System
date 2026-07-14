@@ -1,0 +1,53 @@
+{
+  "receipt_version": "tcis.runtime-release.v3",
+  "date": "2026-07-14",
+  "scope": "L0-L3_LOCAL_RUNTIME",
+  "verdict": "GO",
+  "node_tests": { "passed": 121, "failed": 0 },
+  "runtime_validation": {
+    "passed_surfaces": 5,
+    "failed_surfaces": 0,
+    "store_behavior": ["create", "load", "mutate", "integrity", "tamper_detection", "cleanup"]
+  },
+  "fixtures": {
+    "passed": 73,
+    "failed": 0,
+    "skipped": 0,
+    "unmapped": 0,
+    "digest": "c5089d9dc1959a3d1ea2f0a893168d8946a3349f3b4213e80416f03b4c6a58c3"
+  },
+  "synthetic_projects": {
+    "passed": 9,
+    "failed": 0,
+    "digest": "6f6683ed15a55876323bf4139ebc66ba46a024db273730e6ce900f61e34c985d"
+  },
+  "capabilities": { "packages": 30, "specialist_agents": 29, "generated_artifacts": 91 },
+  "closed_surfaces": [
+    "media_structure_and_inspector_identity",
+    "revision_and_lock_aggregate_invariants",
+    "conflict_and_silence_persistence_semantics",
+    "wal_lock_and_revision_lifecycle",
+    "locale_independent_canonical_state",
+    "behavioral_runtime_validation",
+    "generated_cleanup_containment",
+    "manifest_path_bijection",
+    "professional_authority_and_l0_l6_taxonomy",
+    "retired_workflow_payload_and_active_dependency_removal",
+    "host_independent_powershell_sha256"
+  ],
+  "retired_workflow_state": {
+    "payload": "ABSENT",
+    "active_dependency": "ABSENT",
+    "protected_source_snapshot": "PRESERVED"
+  },
+  "independent_post_repair_qa": { "verdict": "GO", "behavioral_rechecks": 3, "media_counterexamples_closed": 9 },
+  "standalone_package_verifier": {
+    "passed": 22,
+    "failed": 0,
+    "manifest_gate": "PASS",
+    "manifest_entries": 170
+  },
+  "real_project_validation": "NOT_RUN",
+  "external_blind_review": "NOT_RUN",
+  "commercial_production_readiness": "NOT_PROVEN"
+}

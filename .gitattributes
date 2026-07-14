@@ -1,0 +1,3 @@
+# TCIS verifies package bytes with MANIFEST.sha256. Preserve repository content
+# byte-for-byte across platforms instead of applying automatic EOL conversion.
+* -text

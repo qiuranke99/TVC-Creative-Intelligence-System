@@ -1,0 +1,23 @@
+{
+  "name": "tcis-codex-runtime",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Codex-native TVC Creative Intelligence System v3 runtime",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "tcis": "./bin/tcis.mjs"
+  },
+  "scripts": {
+    "test": "node ./tools/preflight.mjs && node --test --test-concurrency=1",
+    "test:unit": "node ./tools/preflight.mjs && node --test tests/contracts.test.mjs tests/state.test.mjs tests/workflow.test.mjs tests/capabilities.test.mjs tests/fixtures.test.mjs tests/media.test.mjs tests/schema-parity.test.mjs tests/static.test.mjs tests/runtime-validation.test.mjs",
+    "test:e2e": "node --test tests/e2e.test.mjs",
+    "validate": "node ./bin/tcis.mjs validate",
+    "fixtures": "node ./bin/tcis.mjs run-fixtures",
+    "demo": "node ./bin/tcis.mjs demo",
+    "manifest": "node ./tools/update-manifest.mjs"
+  },
+  "license": "UNLICENSED"
+}

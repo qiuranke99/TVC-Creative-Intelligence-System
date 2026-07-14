@@ -1,0 +1,25 @@
+# Dependencies and generated/runtime output
+node_modules/
+.tcis-tmp/
+coverage/
+tmp/
+*.log
+
+# Machine-local configuration and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Live client-operational state stays local and is never part of the public package
+tasks/current/

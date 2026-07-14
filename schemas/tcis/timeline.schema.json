@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/timeline.schema.json",
+  "title": "TCIS Timeline",
+  "type": "object",
+  "x-tcis-timelineIntegrity": true,
+  "additionalProperties": true,
+  "required": ["schema_version", "project_id", "timeline_id", "artifact_id", "version", "fps", "duration_seconds", "tracks"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "timeline_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "fps": { "type": "number", "exclusiveMinimum": 0 },
+    "duration_seconds": { "type": "number", "exclusiveMinimum": 0 },
+    "tracks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["track_id", "kind", "clips"],
+        "properties": {
+          "track_id": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["VIDEO", "AUDIO", "GRAPHICS", "CAPTIONS"] },
+          "clips": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["clip_id", "start_seconds", "duration_seconds"],
+              "properties": {
+                "clip_id": { "type": "string", "minLength": 1 },
+                "shot_id": { "type": "string", "minLength": 1 },
+                "take_id": { "type": "string", "minLength": 1 },
+                "start_seconds": { "type": "number", "minimum": 0 },
+                "duration_seconds": { "type": "number", "exclusiveMinimum": 0 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

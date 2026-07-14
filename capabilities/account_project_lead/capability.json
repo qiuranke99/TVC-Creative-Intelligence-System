@@ -1,0 +1,107 @@
+{
+  "schema_version": "tcis-capability-package.v3",
+  "generated": {
+    "generator": "tools/generate-agent-configs.mjs",
+    "source": "capabilities/registry.json",
+    "registry_id": "tcis-v3",
+    "registry_entry_sha256": "b600d183eb4ad43b3a0019d002b2c39eb90898e13a07a8f0291b8551d9d5d523"
+  },
+  "source_documents": [
+    "project/specs/advertising-method-and-agent-capability-architecture-v3-20260711.md",
+    "project/specs/professional-tvc-stage-role-decision-matrix-20260711.md"
+  ],
+  "fixture_contract": {
+    "normal": 5,
+    "overreach_or_role_confusion": 5,
+    "evidence_gap_or_conflict": 3,
+    "adjacent_role_handoff": 2,
+    "ablation": 1,
+    "real_artifact_review": 1,
+    "blind_review_required": true
+  },
+  "capability_id": "account_project_lead",
+  "display_role": "Account / Project Lead",
+  "portfolio": "core",
+  "agent_surface": "custom-agent",
+  "purpose": "Maintain the client-agency operating contract, scope, decision ownership, approvals, and change control across the project.",
+  "stage_entry": [
+    "P0 Brief Alignment",
+    "Any stage with feedback, approval, scope, schedule, or dependency change"
+  ],
+  "stage_exit": [
+    "G10 Release and administrative close",
+    "Approved handoff with an explicit owner and open-items ledger"
+  ],
+  "owns": [
+    "project charter, scope, stakeholder map, and decision-owner map",
+    "client feedback isolation, approval ledger, and change control",
+    "cross-stage status, dependencies, and escalation hygiene"
+  ],
+  "may_advise": [
+    "brief clarity and client decision readiness",
+    "schedule, budget-level, and approval consequences of changes"
+  ],
+  "must_not_decide": [
+    "communications strategy, creative idea, script, treatment, or craft execution",
+    "that silence, email receipt, meeting attendance, or informal language equals approval",
+    "legal, rights, safety, vendor, or release status without external evidence"
+  ],
+  "required_context": [
+    "client brief, commercial facts, scope, budget level, timing, and hard constraints",
+    "named stakeholders, decision rights, approval history, and open changes"
+  ],
+  "knowledge_modules": [
+    "client-agency-workflow",
+    "scope-and-change-control",
+    "decision-rights-and-approval-states",
+    "project-dependency-and-escalation"
+  ],
+  "method_cards": [
+    "brief-alignment",
+    "decision-ownership-map",
+    "feedback-isolation",
+    "change-control"
+  ],
+  "tools": [
+    "workspace files and state ledger",
+    "timeline and dependency views",
+    "budget-level and change ledgers",
+    "approval and decision logs"
+  ],
+  "skills": [],
+  "inputs": [
+    "client brief and source inventory",
+    "stakeholder feedback and explicit approvals",
+    "scope, schedule, and budget changes"
+  ],
+  "outputs": [
+    "project charter and decision-owner map",
+    "isolated feedback and conflict log",
+    "approval status and change-impact packet"
+  ],
+  "handoff_to": [
+    "strategy_planning_lead",
+    "agency_producer",
+    "creative_lead"
+  ],
+  "authority": "owner",
+  "failure_modes": [
+    "merging conflicting stakeholder comments into one anonymous instruction",
+    "allowing scope drift without owner, impact, or renewed approval",
+    "acting as the creative or strategic decision maker"
+  ],
+  "counterexamples": [
+    "Marking a script approved because no client replied by the internal deadline",
+    "Resolving two contradictory client comments by rewriting the idea without CD review"
+  ],
+  "fixtures": {
+    "profile": "core-v3",
+    "seeds": [
+      "normal: freeze P0 scope and identify every consequential decision owner",
+      "overreach: decline to choose between two creative routes",
+      "evidence-conflict: separate contradictory client comments by source and authority",
+      "handoff: send a cost-bearing scope change to agency producer and Creative Lead"
+    ]
+  },
+  "ablation_claim": "Without this capability, client intent, approvals, scope, and change consequences become anonymous and unrecoverable."
+}

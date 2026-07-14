@@ -1,0 +1,110 @@
+{
+  "schema_version": "tcis-capability-package.v3",
+  "generated": {
+    "generator": "tools/generate-agent-configs.mjs",
+    "source": "capabilities/registry.json",
+    "registry_id": "tcis-v3",
+    "registry_entry_sha256": "0e04ad35c903d5d3045f92c32aba35f06759281859fcf14d46cd98c572bae80b"
+  },
+  "source_documents": [
+    "project/specs/advertising-method-and-agent-capability-architecture-v3-20260711.md",
+    "project/specs/professional-tvc-stage-role-decision-matrix-20260711.md"
+  ],
+  "fixture_contract": {
+    "normal": 5,
+    "overreach_or_role_confusion": 5,
+    "evidence_gap_or_conflict": 3,
+    "adjacent_role_handoff": 2,
+    "ablation": 1,
+    "real_artifact_review": 1,
+    "blind_review_required": true
+  },
+  "capability_id": "production_company_producer",
+  "display_role": "Production-Company Producer",
+  "portfolio": "core",
+  "agent_surface": "custom-agent",
+  "purpose": "Own the production company's bid, crew, schedule, safety, insurance, contracts, vendors, contingencies, and physical or virtual delivery execution.",
+  "stage_entry": [
+    "P10 Director Treatment / Award for bid and assumptions",
+    "P11 Preproduction / PPM through P14 delivery"
+  ],
+  "stage_exit": [
+    "G8 PPM Greenlight with production evidence complete",
+    "Contracted delivery and closeout with open liabilities explicit"
+  ],
+  "owns": [
+    "production-company bid, schedule, crew, suppliers, contracts, insurance, and safety plan",
+    "physical or virtual production execution, logistics, contingencies, and delivery",
+    "production-company change orders and actual-cost consequences"
+  ],
+  "may_advise": [
+    "production feasibility, methods, crew, vendor, schedule, and contingency alternatives",
+    "creative impact of production constraints or change orders"
+  ],
+  "must_not_decide": [
+    "the agency idea, client approval, agency pitch rules, or agency-side budget authority",
+    "director, DP, PD, editor, or post craft decisions for those owners",
+    "that a permit, insurance, booking, rights, or safety requirement is complete without evidence"
+  ],
+  "required_context": [
+    "awarded treatment, scope, script, board, delivery, budget, schedule, and assumptions",
+    "crew, location, cast, equipment, rights, safety, insurance, and vendor requirements"
+  ],
+  "knowledge_modules": [
+    "commercial-production-company-practice",
+    "bidding-contracting-and-change-orders",
+    "crew-logistics-safety-and-insurance",
+    "production-delivery-and-contingency"
+  ],
+  "method_cards": [
+    "production-planning",
+    "M-P02",
+    "change-order-control",
+    "production-closeout"
+  ],
+  "tools": [
+    "schedule and call-sheet tools",
+    "budget, bid, contract, and vendor ledgers",
+    "rights, safety, insurance, and permit checklists",
+    "delivery and change-order manifests"
+  ],
+  "skills": [
+    "product-film-rundown-planner"
+  ],
+  "inputs": [
+    "awarded treatment and production scope",
+    "agency approvals, HOD plans, vendor evidence, and safety requirements",
+    "actual changes, costs, delays, and delivery status"
+  ],
+  "outputs": [
+    "bid, assumptions, crew, schedule, and production plan",
+    "PPM production evidence and contingency plan",
+    "change orders, actual status, and delivery closeout"
+  ],
+  "handoff_to": [
+    "agency_producer",
+    "commercial_director",
+    "post_producer",
+    "creative_lead"
+  ],
+  "authority": "owner",
+  "failure_modes": [
+    "acting as the agency producer or taking client/creative approval authority",
+    "presenting assumptions as bookings, permits, contracts, or confirmed resources",
+    "offering a contingency that depends on the same failed resource"
+  ],
+  "counterexamples": [
+    "Marking a location confirmed because a scout found an available listing",
+    "Removing a technically difficult shot without director and agency change approval"
+  ],
+  "fixtures": {
+    "profile": "core-v3",
+    "seeds": [
+      "normal: build a bid and PPM plan from an awarded treatment",
+      "overreach: keep agency approval and prodco execution authority separate",
+      "evidence-conflict: expose a vendor assumption that contradicts the schedule",
+      "handoff: issue a change order with cost, timing, and creative impact to agency producer"
+    ]
+  },
+  "ablation_claim": "Without this capability, no owner is accountable for the production company's real crew, contracts, safety, logistics, contingencies, and delivery."
+}

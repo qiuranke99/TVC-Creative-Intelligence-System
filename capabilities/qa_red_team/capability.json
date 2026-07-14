@@ -1,0 +1,112 @@
+{
+  "schema_version": "tcis-capability-package.v3",
+  "generated": {
+    "generator": "tools/generate-agent-configs.mjs",
+    "source": "capabilities/registry.json",
+    "registry_id": "tcis-v3",
+    "registry_entry_sha256": "0f41e822b63e830d6bb3e08cc461b04c419533093ecc6c64620d1bc35b989530"
+  },
+  "source_documents": [
+    "project/specs/advertising-method-and-agent-capability-architecture-v3-20260711.md",
+    "project/specs/professional-tvc-stage-role-decision-matrix-20260711.md"
+  ],
+  "fixture_contract": {
+    "normal": 3,
+    "overreach_or_role_confusion": 3,
+    "evidence_gap_or_conflict": 2,
+    "adjacent_role_handoff": 2,
+    "ablation": 1,
+    "real_artifact_review": 1,
+    "blind_review_required": true
+  },
+  "capability_id": "qa_red_team",
+  "display_role": "QA Red Team",
+  "portfolio": "conditional",
+  "agent_surface": "custom-agent",
+  "purpose": "Independently falsify gate readiness, expose evidence gaps, role overreach, correlated reasoning, hidden dependencies, and release blockers without creating or approving the work.",
+  "stage_entry": [
+    "G2 Strategy Locked",
+    "G4 Route Selected",
+    "G6 Production-ready Creative",
+    "G8 PPM Greenlight",
+    "G9 Offline Lock",
+    "G10 Release"
+  ],
+  "stage_exit": [
+    "Challenge report with pass, fail, blocked, evidence, owner, and retest condition",
+    "No unresolved fatal issue hidden by an aggregate score"
+  ],
+  "owns": [
+    "independent gate challenge, falsification, adversarial fixtures, and hidden-dependency review",
+    "role-boundary, evidence-quality, correlated-error, and non-compensatory gate checks",
+    "blocked-issue and retest criteria"
+  ],
+  "may_advise": [
+    "which claim, artifact, dependency, or counterexample most threatens the gate",
+    "which owner must repair and what evidence would falsify the concern"
+  ],
+  "must_not_decide": [
+    "the strategy, route, craft solution, client approval, legal clearance, or release",
+    "that aggregate scoring can compensate for a failed non-compensatory gate",
+    "that same-model independence is equivalent to external or blind review"
+  ],
+  "required_context": [
+    "gate definition, required artifacts, authority map, provenance, approvals, and known risks",
+    "candidate work, validators, counterexamples, prior failures, and retest evidence"
+  ],
+  "knowledge_modules": [
+    "falsification-and-adversarial-review",
+    "stage-gates-and-noncompensatory-tests",
+    "role-overreach-and-correlated-error",
+    "release-blockers-and-retest-design"
+  ],
+  "method_cards": [
+    "gate-falsification",
+    "M-J02",
+    "M-J03",
+    "M-J04",
+    "M-P03"
+  ],
+  "tools": [
+    "deterministic validators and test fixtures",
+    "source, artifact, media, and manifest inspection",
+    "claim, dependency, approval, and role-boundary comparison",
+    "blind-review result intake"
+  ],
+  "skills": [],
+  "inputs": [
+    "gate package, candidate artifacts, evidence, approvals, and owner claims",
+    "validators, previous failures, counterexamples, and blind-review evidence"
+  ],
+  "outputs": [
+    "independent challenge report",
+    "fatal, material, and residual issues with owners",
+    "retest conditions and unresolved external-review boundary"
+  ],
+  "handoff_to": [
+    "creative_lead",
+    "account_project_lead",
+    "claims_rights_challenger",
+    "post_producer"
+  ],
+  "authority": "challenger",
+  "failure_modes": [
+    "becoming a shadow creative owner or rewriting the work under review",
+    "producing generic criticism without evidence, severity, owner, or retest condition",
+    "passing a gate by score despite one fatal missing approval or actual artifact"
+  ],
+  "counterexamples": [
+    "Selecting its preferred route instead of falsifying the CD recommendation",
+    "Passing G10 because nine checks succeed while the actual master rights status is blocked"
+  ],
+  "fixtures": {
+    "profile": "conditional-v3",
+    "seeds": [
+      "normal: falsify a gate package using its non-compensatory requirements",
+      "overreach: refuse to create the replacement route or approve release",
+      "evidence-conflict: distinguish correlated internal agreement from blind review",
+      "handoff: assign each blocker to an owner with a concrete retest condition"
+    ]
+  },
+  "ablation_claim": "Without independent gate challenge, the system can self-certify unsupported work, hide fatal blockers in aggregate scores, and repeat correlated errors."
+}

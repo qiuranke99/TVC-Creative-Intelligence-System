@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "example-project",
+  "packet_id": "dp_example_creative_route_v1",
+  "artifact_id": "artifact_creative_routes_v1",
+  "artifact_version": 1,
+  "stage": "P4_CREATIVE_ROUTES",
+  "interaction_phase": "PROPOSAL",
+  "decision_owner": "client_creative_owner",
+  "decision_question": "Which route should AI develop after considering the stated tradeoffs?",
+  "options": [
+    {
+      "id": "route_a",
+      "proposition": "Make the product the causal proof inside a compact human reversal.",
+      "strengths": ["Product role is causal", "Works within the selected duration"],
+      "risks": ["Requires the performance beat to remain legible"]
+    },
+    {
+      "id": "route_b",
+      "proposition": "Use a repeatable visual demonstration system with a sharper product proof.",
+      "strengths": ["Clear demonstration", "Supports multiple executions"],
+      "risks": ["May feel less emotionally distinctive"]
+    }
+  ],
+  "recommendation": {
+    "option_id": "route_a",
+    "rationale": "It best joins the human tension to the product proof without adding a separate message."
+  },
+  "known_facts": ["The approved duration is 30 seconds"],
+  "assumptions": ["A restrained performance style remains acceptable"],
+  "unknowns": ["Casting feasibility has not been tested"],
+  "hard_blocks": [],
+  "allowed_responses": ["SELECT", "ADVISE", "NONE", "REVISE", "REOPEN", "STOP"]
+}

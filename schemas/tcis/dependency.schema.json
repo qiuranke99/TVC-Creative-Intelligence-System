@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/dependency.schema.json",
+  "title": "TCIS Artifact Dependency",
+  "type": "object",
+  "x-tcis-distinctFields": [["from_artifact_id", "to_artifact_id"]],
+  "additionalProperties": false,
+  "required": ["schema_version", "project_id", "from_artifact_id", "from_artifact_version", "to_artifact_id", "to_artifact_version", "kind"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "from_artifact_id": { "type": "string", "minLength": 1 },
+    "from_artifact_version": { "type": "integer", "minimum": 1 },
+    "to_artifact_id": { "type": "string", "minLength": 1 },
+    "to_artifact_version": { "type": "integer", "minimum": 1 },
+    "kind": { "enum": ["DERIVED_FROM", "CONSTRAINED_BY", "EVIDENCED_BY"] }
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "schema_version": "tcis-generated-manifest.v1",
+  "source": "capabilities/registry.json",
+  "registry_sha256": "743d106561d9c1ee933328b517fd629f257ea3d18b0fd3a67d62e3034c1e4aca",
+  "custom_agent_ids": [
+    "account_project_lead",
+    "strategy_planning_lead",
+    "research_insight_lead",
+    "brand_strategist",
+    "creative_director",
+    "copywriter",
+    "agency_art_director",
+    "agency_producer",
+    "claims_rights_challenger",
+    "commercial_director",
+    "production_company_producer",
+    "director_of_photography",
+    "production_designer",
+    "editor",
+    "post_producer",
+    "ai_generation_supervisor",
+    "media_asset_strategist",
+    "visual_development_lead",
+    "animation_director",
+    "vfx_supervisor",
+    "motion_designer",
+    "sound_designer",
+    "music_supervisor",
+    "casting_lead",
+    "location_scout",
+    "wardrobe_hmu",
+    "reference_research_service",
+    "qa_red_team",
+    "memory_librarian"
+  ],
+  "main_thread_capability_ids": [
+    "creative_lead"
+  ],
+  "generated_files": [
+    {
+      "path": ".codex/agents/account-project-lead.toml",
+      "sha256": "c96cc34ba7501551252bf0f45f64e9313fed43ac243efcb6cc23c1eaa58539bf"
+    },
+    {
+      "path": ".codex/agents/agency-art-director.toml",
+      "sha256": "5128463baaddb550595b9819cff2f7e04e4f45ff7f1b4ede7d23824145559fa6"
+    },
+    {
+      "path": ".codex/agents/agency-producer.toml",
+      "sha256": "7f5c821d1482ffd05ed5b10b0aa4f95cf577aa2b4920f2e1f6b088ca80c79b7f"
+    },
+    {
+      "path": ".codex/agents/ai-generation-supervisor.toml",
+      "sha256": "8413026ce6af7593588e5927ed745534ea4a2a35058acda867da5fbbc7b06fa8"
+    },
+    {
+      "path": ".codex/agents/animation-director.toml",
+      "sha256": "a36ec4507c134e4aa8e21919a6fbf02ddd121b453f661fc12c7bb3059a58f343"
+    },
+    {
+      "path": ".codex/agents/brand-strategist.toml",
+      "sha256": "2429a1b84d1fe7fd10ce3481ef9b80ca7380df9bbc67ab4ee53236e50b483c29"
+    },
+    {
+      "path": ".codex/agents/casting-lead.toml",
+      "sha256": "91d50fcf5acb8bd465f29a90040bfe2b9dd5774c7d06ad598dc1d6c85c2e9f45"
+    },
+    {
+      "path": ".codex/agents/claims-rights-challenger.toml",
+      "sha256": "7a0bf41188ddb30fa346891df418ba791cc513a9f5c6a1028e01c616f37c8ecc"
+    },
+    {
+      "path": ".codex/agents/commercial-director.toml",
+      "sha256": "0b180fa744a443fe79b4697f9d57265b3550efb4841125ee10884563fa12dfcb"
+    },
+    {
+      "path": ".codex/agents/copywriter.toml",
+      "sha256": "51bb2b04e33e5ebbeb069666342723b6089dc6ec47ded6f24e7ceedb2394878c"
+    },
+    {
+      "path": ".codex/agents/creative-director.toml",
+      "sha256": "4db78479e316f953ea6e5f1df87b4bfecad2ac44d092af5b03ce223b712be9a3"
+    },
+    {
+      "path": ".codex/agents/director-of-photography.toml",
+      "sha256": "ba0ec7a0cf5414bf782633acff121422db3c459699925391c391ac8623e26f4a"
+    },
+    {
+      "path": ".codex/agents/editor.toml",
+      "sha256": "5302cb07182ed0d7bb0b16f152237538f87efbea7278f4ced6895f1d8988786e"
+    },
+    {
+      "path": ".codex/agents/location-scout.toml",
+      "sha256": "bcb313809facf8647a4896927afe86991fe07a3a6c5c59c3b57add75d458101b"
+    },
+    {
+      "path": ".codex/agents/media-asset-strategist.toml",
+      "sha256": "88adaed1d299d74de6257ea3c883f532c9a2445b2cac11dab76cf707e776a031"
+    },
+    {
+      "path": ".codex/agents/memory-librarian.toml",
+      "sha256": "200ac713334ca48a7837723e7839bb1eb053bb7331c2c8c1caf4ab8ab960b4d1"
+    },
+    {
+      "path": ".codex/agents/motion-designer.toml",
+      "sha256": "b58061235924590bc853cd30e77002982152531cc189d006fe5cf2680f497865"
+    },
+    {
+      "path": ".codex/agents/music-supervisor.toml",
+      "sha256": "bce4d516ddcc5d357485186c982001150d2af3485c5dc2e0291031af4c349cd4"
+    },
+    {
+      "path": ".codex/agents/post-producer.toml",
+      "sha256": "38684e987f226d1e3a17dab6086c6166ff36310c1f2cad52546fe4e7bdc5926f"
+    },
+    {
+      "path": ".codex/agents/production-company-producer.toml",
+      "sha256": "d7b965b649ab0cf40b4a803f4de6d7d5e230b36559ed0efab0879497f54d08cb"
+    },
+    {
+      "path": ".codex/agents/production-designer.toml",
+      "sha256": "bca0a3a98c3d2f25e856b20bd0a9b1288622af03924c1d38533749be2e0fee29"
+    },
+    {
+      "path": ".codex/agents/qa-red-team.toml",
+      "sha256": "d996bf543b78d3e3198b2200318c4f91109085c52c2e3caabc9a3261d01ecda2"
+    },
+    {
+      "path": ".codex/agents/reference-research-service.toml",
+      "sha256": "4a89f6e2293c5df9e5867a570d3aedab1edb2c747fb15ad23be922d47972d930"
+    },
+    {
+      "path": ".codex/agents/research-insight-lead.toml",
+      "sha256": "07cd9ca013d02bbe32d5ec199d1bc4961ed1f3fb8bf45ee9941708200406499b"
+    },
+    {
+      "path": ".codex/agents/sound-designer.toml",
+      "sha256": "536623a53d9a8870cfdd5909c21d748322d7fa63f0707354cebd41764faf0fa0"
+    },
+    {
+      "path": ".codex/agents/strategy-planning-lead.toml",
+      "sha256": "4a7424170625a4ce0750f5ec6f99391c7f49c97b56357e913f5a6478c258a3c0"
+    },
+    {
+      "path": ".codex/agents/vfx-supervisor.toml",
+      "sha256": "ddb359a5974ec3b04b1e91f62de75e713e6cf3b84bcf24259ccfff7d08d5bffa"
+    },
+    {
+      "path": ".codex/agents/visual-development-lead.toml",
+      "sha256": "f195a40625044da7e86d6a357741980fa1e1c35b517d81a2e98eaac97b5da870"
+    },
+    {
+      "path": ".codex/agents/wardrobe-hmu.toml",
+      "sha256": "c9e82babf42d2bd65d85fde8d76390ba07585c0303ccd59189626d9f55892a4c"
+    },
+    {
+      "path": "capabilities/account_project_lead/capability.json",
+      "sha256": "f858b81c26cf32ed816813b177a6a0aee0d80d63dee52ff51731c1870aba2716"
+    },
+    {
+      "path": "capabilities/account_project_lead/CAPABILITY.md",
+      "sha256": "66f222798acfb739f1f07d38e40b529b5b3611e6609045f85930d95b56556c27"
+    },
+    {
+      "path": "capabilities/agency_art_director/capability.json",
+      "sha256": "7353331f857928387954da1fd399fadcff4b1b9aaf944b52ee3b1d433a5b5ec6"
+    },
+    {
+      "path": "capabilities/agency_art_director/CAPABILITY.md",
+      "sha256": "088af50c80f697e863d7e36cc3ee7ff930f50818514c1455cec5bb77fd52874e"
+    },
+    {
+      "path": "capabilities/agency_producer/capability.json",
+      "sha256": "5cac7eab12fe735213a51a0a338cb65116a182f4b572b3b2c11a59fd4d90c4d2"
+    },
+    {
+      "path": "capabilities/agency_producer/CAPABILITY.md",
+      "sha256": "682c330f1344204f1e949b44463582e2bf5fb970f02488765de58dbd6c4e9ed3"
+    },
+    {
+      "path": "capabilities/ai_generation_supervisor/capability.json",
+      "sha256": "4ed00fa01dd898c7e04f69ff4436faf0f0d3cb8757f6ad91ee127787ae5b9ae7"
+    },
+    {
+      "path": "capabilities/ai_generation_supervisor/CAPABILITY.md",
+      "sha256": "0ddc1d5ae1be99979914b5c2eb3439d254bdbb3c2d573651184bcbe1d5e19a71"
+    },
+    {
+      "path": "capabilities/animation_director/capability.json",
+      "sha256": "bfc7540e63ba37c91063d2587490d2208b6959d4cb854def478f7a2adc1a39f0"
+    },
+    {
+      "path": "capabilities/animation_director/CAPABILITY.md",
+      "sha256": "9a548c8816ba4b03a3fede4eb1765b406335d59e89388a0118f902d4c92f0b63"
+    },
+    {
+      "path": "capabilities/brand_strategist/capability.json",
+      "sha256": "c81fd025b5314741875538912b67df0052a08a0835ad8349132e8f44d00119a3"
+    },
+    {
+      "path": "capabilities/brand_strategist/CAPABILITY.md",
+      "sha256": "669c28866b61b27254a3b41b292672fb0af5fde0e63004faf8b36c61b4a449ac"
+    },
+    {
+      "path": "capabilities/casting_lead/capability.json",
+      "sha256": "d9cf457dd6a69a263eff00508f97609b48403310cf6461f0f6b8a906648cce76"
+    },
+    {
+      "path": "capabilities/casting_lead/CAPABILITY.md",
+      "sha256": "b9f926b59c1b846bb1c4e12588a2ee45d99c7b709446f1c3fdea8f113ae2519c"
+    },
+    {
+      "path": "capabilities/claims_rights_challenger/capability.json",
+      "sha256": "ea7d87891768130c7ad6015e99751e42f3e2a5acfe65447457d27d8aa7905ecc"
+    },
+    {
+      "path": "capabilities/claims_rights_challenger/CAPABILITY.md",
+      "sha256": "1ec2f36c8d58e643831daadfb574226814035b313f3f6db160b00c2272695284"
+    },
+    {
+      "path": "capabilities/commercial_director/capability.json",
+      "sha256": "fc0e961594a63a5b3cb47268308bc204d909f7e586da3bb102b529ea96136ce0"
+    },
+    {
+      "path": "capabilities/commercial_director/CAPABILITY.md",
+      "sha256": "e77cf71ea846d2416618a159978d69a72145a27603bab67926487bf7961b834c"
+    },
+    {
+      "path": "capabilities/copywriter/capability.json",
+      "sha256": "c3a900cb1e25072411821c8f1f92ed22ce6aa6ab9786d726eabd965277c7678d"
+    },
+    {
+      "path": "capabilities/copywriter/CAPABILITY.md",
+      "sha256": "4dd281db418ebafe839f6a0b9043f7d997fb75f1ed5b9b6e759529ceae8a91a2"
+    },
+    {
+      "path": "capabilities/creative_director/capability.json",
+      "sha256": "bf8438b78492d6d18b8b161bdaabb19487fe0403c5aab28baa5eb1e9259f376d"
+    },
+    {
+      "path": "capabilities/creative_director/CAPABILITY.md",
+      "sha256": "a2f66957f0d345e02f4f9867a433ef8a74cab75ea64b3159759f78df1386f4bb"
+    },
+    {
+      "path": "capabilities/creative_lead/capability.json",
+      "sha256": "61fb04ea6ea3df2d52664ec845aac8ac7a39116b0725882c37fc76c39df9f62c"
+    },
+    {
+      "path": "capabilities/creative_lead/CAPABILITY.md",
+      "sha256": "adeb08b832c828bbd8803587dc16ab305f0ea7a28a38f80ade277ab43ce2e32c"
+    },
+    {
+      "path": "capabilities/director_of_photography/capability.json",
+      "sha256": "3681fc6e4852601aa27132ff24389124ccacbfcdbea7853c1676c58a538b7716"
+    },
+    {
+      "path": "capabilities/director_of_photography/CAPABILITY.md",
+      "sha256": "09ff38adcccca83f94b08b46c3e6139e8ca33ffc1336db9802a11c3046468414"
+    },
+    {
+      "path": "capabilities/editor/capability.json",
+      "sha256": "b1a876aee2e4e70424d71632271d54553afd74a054c1abf61026005d64af52d7"
+    },
+    {
+      "path": "capabilities/editor/CAPABILITY.md",
+      "sha256": "938c9b3a563825723fab19170766c66b66ae97d575ae375e8ba3c35aa6a46961"
+    },
+    {
+      "path": "capabilities/location_scout/capability.json",
+      "sha256": "1b2aa9094c211104c39235751ec10589c4809bbe5bd10ceb49de27dd502e8551"
+    },
+    {
+      "path": "capabilities/location_scout/CAPABILITY.md",
+      "sha256": "87cd3ba22d5f5c759241122af3da365036fc3f959753a2899bcae848ff9b8f2d"
+    },
+    {
+      "path": "capabilities/media_asset_strategist/capability.json",
+      "sha256": "9667be9431d3518747a9c18a5fb7bc16260901e538b936ea942c088601f8dd03"
+    },
+    {
+      "path": "capabilities/media_asset_strategist/CAPABILITY.md",
+      "sha256": "8c98b92d3779b29f96e030164be4912230ce32861a8c4a591fc3372a25dbc265"
+    },
+    {
+      "path": "capabilities/memory_librarian/capability.json",
+      "sha256": "dc9fce0b7a904639972997f69a3c49333104d9cd6ab32edcbabdf06a0d26d69f"
+    },
+    {
+      "path": "capabilities/memory_librarian/CAPABILITY.md",
+      "sha256": "372ee172d03c0afea749f5a4122a57ba39b9cb22c904c662563aa8935f0b9d09"
+    },
+    {
+      "path": "capabilities/motion_designer/capability.json",
+      "sha256": "65b5a699559ccafae94e48964284dd51bf817203506d4f2f207e2e255a26874b"
+    },
+    {
+      "path": "capabilities/motion_designer/CAPABILITY.md",
+      "sha256": "3071fdcf3ad819dcb2aae2ce1bd6e4d47dcfb46c6250d0127193041a648ebaae"
+    },
+    {
+      "path": "capabilities/music_supervisor/capability.json",
+      "sha256": "a0083504c51bc237d0b702b44cba916853d113c322ea0e9eec086ac987870fbf"
+    },
+    {
+      "path": "capabilities/music_supervisor/CAPABILITY.md",
+      "sha256": "26976715693e8b68443a9003e9180a3a3552825793f0af870b580395cbd5e3a7"
+    },
+    {
+      "path": "capabilities/post_producer/capability.json",
+      "sha256": "f821a1d66c5b4a7161e488a2933c8b2b8247f55a36dd0329bdd90504688e630e"
+    },
+    {
+      "path": "capabilities/post_producer/CAPABILITY.md",
+      "sha256": "b22ed19a840cdb12f0f4db1b1377ad35eaf6c44978bafad6ddc098089efa654a"
+    },
+    {
+      "path": "capabilities/production_company_producer/capability.json",
+      "sha256": "e3338589551f598a1a4691dd5820e0f51693a07a6875af2f9e239374f12ea2c3"
+    },
+    {
+      "path": "capabilities/production_company_producer/CAPABILITY.md",
+      "sha256": "b54e9cd12e42fccabbc8366ad6f6f7c0c33c3dde6a14008fa12ef0958a441b95"
+    },
+    {
+      "path": "capabilities/production_designer/capability.json",
+      "sha256": "b9fe55fae8d84c16ed7e8fcbece94490e7e51bda1c5342001a33f87039e7bf3b"
+    },
+    {
+      "path": "capabilities/production_designer/CAPABILITY.md",
+      "sha256": "1860e65919a2a45689980d14ae53ecc7953f9e120e0b645a023b492b4f5667c6"
+    },
+    {
+      "path": "capabilities/qa_red_team/capability.json",
+      "sha256": "108481580be059636923bf607171f96979b48f4cf137cb70cfe096fa62af64ac"
+    },
+    {
+      "path": "capabilities/qa_red_team/CAPABILITY.md",
+      "sha256": "fa56492422c20260014db8e518edd9082bfceef91dbf49895cac6061f1023a1f"
+    },
+    {
+      "path": "capabilities/README.md",
+      "sha256": "d1ce468c56aab3ea64c9ceef67313bf6d90ea37f0da8f1673d2df795a48f4315"
+    },
+    {
+      "path": "capabilities/reference_research_service/capability.json",
+      "sha256": "dc656f669ba6c3d7e573ee9f018ff873f8ee2aec2e40e6f23ba8c4f1eb69c191"
+    },
+    {
+      "path": "capabilities/reference_research_service/CAPABILITY.md",
+      "sha256": "b5073e00e1551857fd1b5becf3faeea12ef75eaa86d3388b31102457fad3d780"
+    },
+    {
+      "path": "capabilities/research_insight_lead/capability.json",
+      "sha256": "2947b63f52e7d0566cc6b1d6ad4dac76dafaec32d822c697d0875c51948a6373"
+    },
+    {
+      "path": "capabilities/research_insight_lead/CAPABILITY.md",
+      "sha256": "753850c0f2bd9adf2341b68a4523df05408d2a2c4b440fa163c333efd162543e"
+    },
+    {
+      "path": "capabilities/sound_designer/capability.json",
+      "sha256": "05012d2f39c00f77398d5be2458d743406716fb3a4a553c0c456646cc83703c2"
+    },
+    {
+      "path": "capabilities/sound_designer/CAPABILITY.md",
+      "sha256": "05ac0dde650fed0a670c65a541ffc77b7287a9363288e133d5ef66a04f843abd"
+    },
+    {
+      "path": "capabilities/strategy_planning_lead/capability.json",
+      "sha256": "e3967535e14bcc471f8bd8d094a3f64707b86d9c61407b01a31febed46a65da5"
+    },
+    {
+      "path": "capabilities/strategy_planning_lead/CAPABILITY.md",
+      "sha256": "9cef34130ba8754830cd681eda99c9f4c66b57e41a18dedad09974fd678963cb"
+    },
+    {
+      "path": "capabilities/vfx_supervisor/capability.json",
+      "sha256": "dcb17b79e52eb8b9b336e624dddc0547eae156062f67eee7599f4d6c9c40366d"
+    },
+    {
+      "path": "capabilities/vfx_supervisor/CAPABILITY.md",
+      "sha256": "c9bd95eb5f3b59ea2097f00dad6a8c1864a85183fc142376800ba06cb8788a47"
+    },
+    {
+      "path": "capabilities/visual_development_lead/capability.json",
+      "sha256": "dee1025055a91e0b2238538b251f2e46cab8f521638a6295a5bbf61e8cf0ce5f"
+    },
+    {
+      "path": "capabilities/visual_development_lead/CAPABILITY.md",
+      "sha256": "06c7a9629a72530b0742df1e19a4fa42e6e5c46bd086371144b834b261481e0e"
+    },
+    {
+      "path": "capabilities/wardrobe_hmu/capability.json",
+      "sha256": "6fbf54927ae2b3329cd40c814f50c39d0d7bc6f0f848f3d8c68e7b14ffacb4b2"
+    },
+    {
+      "path": "capabilities/wardrobe_hmu/CAPABILITY.md",
+      "sha256": "dfc9ca2bb0a92101d880a12f82b7f7f46429551e733de19cfd4e718fb263ffb8"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "example-project",
+  "feedback_id": "feedback_example_route_a",
+  "packet_id": "dp_example_creative_route_v1",
+  "action": "SELECT",
+  "decision_owner": "client_creative_owner",
+  "selected_option_id": "route_a",
+  "comment": "Develop route A, but keep the product proof visible before the final brand beat."
+}

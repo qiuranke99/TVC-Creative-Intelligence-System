@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/take.schema.json",
+  "title": "TCIS Take",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "project_id", "take_id", "shot_id", "kind", "status", "media_path", "media_hash", "duration_seconds"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "take_id": { "type": "string", "minLength": 1 },
+    "shot_id": { "type": "string", "minLength": 1 },
+    "kind": { "enum": ["LIVE_ACTION", "AI_GENERATED", "ANIMATION", "VFX", "ARCHIVAL"] },
+    "status": { "enum": ["RECORDED", "GENERATED", "INSPECTED", "SELECTED", "REJECTED", "FAILED"] },
+    "attempt_id": { "type": ["string", "null"] },
+    "media_path": { "type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+" },
+    "media_hash": { "type": "string", "pattern": "^[0-9a-fA-F]{64}$" },
+    "duration_seconds": { "type": "number", "exclusiveMinimum": 0 },
+    "inspection": { "type": "object" },
+    "selected_by": { "type": "string" }
+  },
+  "allOf": [
+    { "if": { "properties": { "kind": { "const": "AI_GENERATED" } } }, "then": { "required": ["attempt_id"], "properties": { "attempt_id": { "type": "string", "minLength": 1 } } } },
+    { "if": { "properties": { "status": { "const": "SELECTED" } } }, "then": { "required": ["inspection", "selected_by"], "properties": { "inspection": { "required": ["passed"], "properties": { "passed": { "const": true } } } } } }
+  ]
+}

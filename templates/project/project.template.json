@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "<stable-project-id>",
+  "title": "<project-title>",
+  "scope_mode": "single_tvc",
+  "production_mode": "live_action",
+  "current_stage": "P0_BRIEF_ALIGNMENT",
+  "status": "ACTIVE",
+  "revision": 0,
+  "active_artifact_id": null,
+  "created_at": "<ISO-8601 timestamp>",
+  "updated_at": "<ISO-8601 timestamp>"
+}
+

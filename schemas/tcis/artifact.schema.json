@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/artifact.schema.json",
+  "title": "TCIS Artifact",
+  "type": "object",
+  "required": ["schema_version", "project_id", "artifact_id", "type", "stage", "status", "version", "owner_capability", "decision_bearing", "input_artifact_ids", "path", "content_hash", "created_at", "updated_at"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "pattern": "^(?!.*\\.\\.)(?!.*[. ]$)[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$" },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "type": { "type": "string", "minLength": 1 },
+    "stage": { "enum": ["P0_BRIEF_ALIGNMENT", "P1_DIAGNOSIS", "P2_COMMUNICATIONS_STRATEGY", "P3_CREATIVE_BRIEF", "P4_CREATIVE_ROUTES", "P5_CORE_CREATIVE_DECISION", "P6_TVC_EXPRESSION", "P7_SCRIPT_AGENCY_BOARD", "P8_VISUAL_PREDEVELOPMENT", "P9_PRODUCTION_PITCH", "P10_DIRECTOR_TREATMENT_AWARD", "P11_PREPRODUCTION_PPM", "P12_PRODUCTION_SELECTS", "P13_OFFLINE_LOCK", "P14_FINAL_RELEASE"] },
+    "status": { "enum": ["DRAFT", "INTERNAL_REVIEW", "PROPOSED", "REVISED", "LOCKED", "STALE", "BLOCKED"] },
+    "version": { "type": "integer", "minimum": 1 },
+    "owner_capability": { "type": "string", "minLength": 1 },
+    "decision_bearing": { "type": "boolean" },
+    "input_artifact_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+" },
+    "content_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "previous_version_id": { "type": ["string", "null"] },
+    "platform": {
+      "type": "object",
+      "required": ["organizing_idea", "brand_product_role", "invariants", "variables", "prohibitions", "example_executions", "coverage_dimensions", "execution_evidence"],
+      "properties": {
+        "organizing_idea": { "type": "string", "minLength": 1 },
+        "brand_product_role": { "type": "string", "minLength": 1 },
+        "invariants": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "variables": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "prohibitions": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "example_executions": { "type": "array", "minItems": 3, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "coverage_dimensions": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "execution_evidence": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["evidence_kind", "execution_id", "mechanism_id", "coverage"],
+            "properties": {
+              "evidence_kind": { "const": "STRUCTURED_PROTOTYPE" },
+              "execution_id": { "type": "string", "minLength": 1 },
+              "mechanism_id": { "type": "string", "minLength": 1 },
+              "coverage": { "type": "object" }
+            }
+          }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$" },
+    "updated_at": { "type": "string", "format": "date-time", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$" }
+  },
+  "allOf": [{
+    "oneOf": [
+      { "properties": { "type": { "const": "client_brief" }, "stage": { "const": "P0_BRIEF_ALIGNMENT" }, "owner_capability": { "const": "account_project_lead" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "diagnosis" }, "stage": { "const": "P1_DIAGNOSIS" }, "owner_capability": { "const": "strategy_planning_lead" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "communications_strategy" }, "stage": { "const": "P2_COMMUNICATIONS_STRATEGY" }, "owner_capability": { "const": "strategy_planning_lead" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "creative_brief" }, "stage": { "const": "P3_CREATIVE_BRIEF" }, "owner_capability": { "const": "strategy_planning_lead" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "creative_routes" }, "stage": { "const": "P4_CREATIVE_ROUTES" }, "owner_capability": { "const": "creative_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "core_creative_concept" }, "stage": { "const": "P5_CORE_CREATIVE_DECISION" }, "owner_capability": { "const": "creative_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "campaign_platform" }, "stage": { "const": "P5_CORE_CREATIVE_DECISION" }, "owner_capability": { "const": "creative_director" }, "decision_bearing": { "const": true } }, "required": ["platform"] },
+      { "properties": { "type": { "const": "tvc_expression" }, "stage": { "const": "P6_TVC_EXPRESSION" }, "owner_capability": { "const": "copywriter" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "script_agency_board" }, "stage": { "const": "P7_SCRIPT_AGENCY_BOARD" }, "owner_capability": { "const": "creative_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "visual_predevelopment" }, "stage": { "const": "P8_VISUAL_PREDEVELOPMENT" }, "owner_capability": { "const": "agency_art_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "production_pitch" }, "stage": { "const": "P9_PRODUCTION_PITCH" }, "owner_capability": { "const": "agency_producer" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "director_treatment_award" }, "stage": { "const": "P10_DIRECTOR_TREATMENT_AWARD" }, "owner_capability": { "const": "commercial_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "ppm_production_plan" }, "stage": { "const": "P11_PREPRODUCTION_PPM" }, "owner_capability": { "const": "production_company_producer" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "production_selects" }, "stage": { "const": "P12_PRODUCTION_SELECTS" }, "owner_capability": { "const": "commercial_director" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "offline_lock" }, "stage": { "const": "P13_OFFLINE_LOCK" }, "owner_capability": { "const": "editor" }, "decision_bearing": { "const": true } } },
+      { "properties": { "type": { "const": "final_release" }, "stage": { "const": "P14_FINAL_RELEASE" }, "owner_capability": { "const": "post_producer" }, "decision_bearing": { "const": true } } }
+    ]
+  }],
+  "additionalProperties": true
+}

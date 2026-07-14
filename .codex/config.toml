@@ -1,0 +1,26 @@
+# Project-scoped Codex configuration for the standalone TCIS local runtime.
+# Provider credentials remain machine-local; TCIS does not require a user API.
+
+model_reasoning_effort = "xhigh"
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+project_doc_max_bytes = 65536
+
+[features]
+goals = true
+multi_agent = true
+memories = false
+hooks = true
+
+[agents]
+max_threads = 8
+max_depth = 1
+job_max_runtime_seconds = 1800
+
+[memories]
+# TCIS project state and decision ledgers are the only persistent context.
+# Ambient Codex memories are disabled to prevent cross-client contamination.
+generate_memories = false
+use_memories = false
+disable_on_external_context = true
+min_rate_limit_remaining_percent = 20

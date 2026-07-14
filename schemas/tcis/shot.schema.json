@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/shot.schema.json",
+  "title": "TCIS Shot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "project_id", "shot_id", "artifact_id", "stage", "status", "objective", "start_state", "end_state", "action", "duration_seconds", "continuity", "prohibitions", "source_artifact_ids"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "shot_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "stage": { "enum": ["P11_PREPRODUCTION_PPM", "P12_PRODUCTION_SELECTS", "P13_OFFLINE_LOCK", "P14_FINAL_RELEASE"] },
+    "status": { "enum": ["PLANNED", "APPROVED", "IN_PROGRESS", "CAPTURED", "SELECTED", "LOCKED", "STALE", "BLOCKED"] },
+    "objective": { "type": "string", "minLength": 1 },
+    "start_state": { "type": "string", "minLength": 1 },
+    "end_state": { "type": "string", "minLength": 1 },
+    "action": { "type": "string", "minLength": 1 },
+    "duration_seconds": { "type": "number", "exclusiveMinimum": 0 },
+    "continuity": { "type": "array" },
+    "prohibitions": { "type": "array" },
+    "source_artifact_ids": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}

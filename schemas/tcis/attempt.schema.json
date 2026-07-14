@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.tcis/schemas/attempt.schema.json",
+  "title": "TCIS Media Attempt",
+  "type": "object",
+  "required": ["schema_version", "project_id", "attempt_id", "artifact_id", "status", "tool", "request_hash", "reference_ids"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "attempt_id": { "type": "string", "minLength": 1 },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["REQUESTED", "GENERATED", "INSPECTED", "SELECTED", "REJECTED", "FAILED"] },
+    "tool": { "type": "string", "minLength": 1 },
+    "request_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "reference_ids": { "type": "array", "items": { "type": "string" } },
+    "output_path": { "type": "string", "pattern": "^(?![A-Za-z]:)(?![/\\\\])(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+" },
+    "output_hash": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "inspection": { "type": "object" },
+    "selected_by": { "type": "string" }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "enum": ["GENERATED", "INSPECTED", "SELECTED", "REJECTED"] } } }, "then": { "required": ["output_path", "output_hash"] } },
+    { "if": { "properties": { "status": { "const": "SELECTED" } } }, "then": { "required": ["inspection", "selected_by"], "properties": { "inspection": { "required": ["passed"], "properties": { "passed": { "const": true } } } } } }
+  ],
+  "additionalProperties": true
+}

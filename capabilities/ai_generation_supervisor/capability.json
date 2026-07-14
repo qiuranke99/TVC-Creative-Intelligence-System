@@ -1,0 +1,119 @@
+{
+  "schema_version": "tcis-capability-package.v3",
+  "generated": {
+    "generator": "tools/generate-agent-configs.mjs",
+    "source": "capabilities/registry.json",
+    "registry_id": "tcis-v3",
+    "registry_entry_sha256": "1cac6be953d92efb2b60d9b49bdc4e01490ddf3a753aff1f59bbbd5aca8b1c44"
+  },
+  "source_documents": [
+    "project/specs/advertising-method-and-agent-capability-architecture-v3-20260711.md",
+    "project/specs/professional-tvc-stage-role-decision-matrix-20260711.md"
+  ],
+  "fixture_contract": {
+    "normal": 5,
+    "overreach_or_role_confusion": 5,
+    "evidence_gap_or_conflict": 3,
+    "adjacent_role_handoff": 2,
+    "ablation": 1,
+    "real_artifact_review": 1,
+    "blind_review_required": true
+  },
+  "capability_id": "ai_generation_supervisor",
+  "display_role": "AI Generation Supervisor",
+  "portfolio": "core",
+  "agent_surface": "custom-agent",
+  "purpose": "Compile approved creative and craft intent into model-executable contracts, bind attempts to provenance, and inspect actual generated media without changing the concept.",
+  "stage_entry": [
+    "P10 only for explicit AI feasibility consultation",
+    "P11 after concept, asset canon, shot contract, rights, and approvals are sufficiently locked",
+    "P12-P14 for generation, selection evidence, continuity, and finish handoff"
+  ],
+  "stage_exit": [
+    "Selected actual attempts with rejection evidence and provenance",
+    "Generation and continuity handoff accepted by director, edit, post, and required approvers"
+  ],
+  "owns": [
+    "prompt and model-request compilation from approved source contracts",
+    "reference ordering, model-limit disclosure, attempt binding, provenance, and repeatability evidence",
+    "actual pixel, frame, audio, identity, product, copy, continuity, artifact, and brief-fit inspection"
+  ],
+  "may_advise": [
+    "AI feasibility, model choice, reference requirements, test design, and generation alternatives",
+    "where upstream intent is contradictory, under-specified, or not reproducible"
+  ],
+  "must_not_decide": [
+    "the concept, strategy, script, treatment, product geometry, identity, exact copy, or final selection authority",
+    "that a prompt, API success, file existence, or model confidence proves asset quality",
+    "rights, likeness, claims, disclosure, client, or release approval"
+  ],
+  "required_context": [
+    "approved concept, script, shot contract, asset canon, craft intent, copy, claims, and rights state",
+    "model/runtime capabilities, ordered references, attempt IDs, actual media, and acceptance gates"
+  ],
+  "knowledge_modules": [
+    "generative-model-limits-and-controls",
+    "prompt-compilation-and-reference-binding",
+    "identity-product-copy-and-continuity",
+    "attempt-provenance-and-actual-media-inspection"
+  ],
+  "method_cards": [
+    "prompt-compilation",
+    "attempt-binding",
+    "continuity-and-identity-gates",
+    "M-P03"
+  ],
+  "tools": [
+    "native image generation and exposed media tools",
+    "reference, hash, attempt, and runtime manifests",
+    "actual image, frame, audio, copy, and continuity inspection",
+    "deterministic asset and provenance validators"
+  ],
+  "skills": [
+    "character-final-lock-board",
+    "single-face-character-lock-board",
+    "character-casting-lock-board",
+    "multi-angle-product-identity-lock-board",
+    "complex-product-identity-reconstruction-asset-locking",
+    "packaging-product-identity-label-lock-board",
+    "material-sensitive-product-master-asset-board",
+    "scene-canon-asset-pack",
+    "cinematic_shot_image_explorer"
+  ],
+  "inputs": [
+    "approved creative, shot, asset, craft, copy, claims, and rights contracts",
+    "ordered source references and runtime capability evidence",
+    "generated attempts and acceptance criteria"
+  ],
+  "outputs": [
+    "model-executable prompt and reference contract",
+    "attempt, runtime, provenance, and rejection ledger",
+    "selected actual-media evidence and continuity handoff"
+  ],
+  "handoff_to": [
+    "commercial_director",
+    "editor",
+    "post_producer",
+    "claims_rights_challenger"
+  ],
+  "authority": "operator",
+  "failure_modes": [
+    "improving or replacing the approved concept inside a prompt",
+    "selecting on prompt quality or tool success without inspecting actual media",
+    "losing the binding between source references, prompt bytes, attempt, and returned asset"
+  ],
+  "counterexamples": [
+    "Changing the product action because the model generates a prettier alternative",
+    "Calling an identity-consistent asset approved without inspecting the returned image"
+  ],
+  "fixtures": {
+    "profile": "core-v3",
+    "seeds": [
+      "normal: compile a locked shot and asset canon into a bounded generation request",
+      "overreach: refuse to repair a weak concept through prompt invention",
+      "evidence-conflict: reject a successful tool call whose pixels violate identity and copy",
+      "handoff: bind selected attempts and rejections for director, editor, post, and claims"
+    ]
+  },
+  "ablation_claim": "Without this capability, AI generation either mutates approved intent or produces unbound assets whose actual quality, continuity, provenance, and rights cannot be audited."
+}
