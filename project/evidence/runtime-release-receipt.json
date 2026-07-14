@@ -3,7 +3,7 @@
   "date": "2026-07-14",
   "scope": "L0-L3_LOCAL_RUNTIME",
   "verdict": "GO",
-  "node_tests": { "passed": 121, "failed": 0 },
+  "node_tests": { "passed": 122, "failed": 0 },
   "runtime_validation": {
     "passed_surfaces": 5,
     "failed_surfaces": 0,
@@ -45,7 +45,7 @@
     "passed": 22,
     "failed": 0,
     "manifest_gate": "PASS",
-    "manifest_entries": 170
+    "manifest_entries": 171
   },
   "real_project_validation": "NOT_RUN",
   "external_blind_review": "NOT_RUN",

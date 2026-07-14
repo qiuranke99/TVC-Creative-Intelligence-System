@@ -333,6 +333,8 @@ Agent 可以调用已证明的窄 production skills，但 capability 不等于 s
 
 TCIS 当前优先复用 reference research、identity/continuity assets、shot exploration、rundown 等现有 production skills。`strategy-skill`、`big-idea-skill`、`director-skill`、`tcis-all-in-one` 暂不成立。
 
+这些 production skills 是用户自行管理的外部扩展，不属于 TCIS 安装完整性的组成部分，也不由 TCIS 捆绑、自动安装、锁版本或升级。路由到实际依赖步骤时才检查 skill；若缺失或明显不兼容，specialist 向 main thread 返回准确名称、用途、受影响步骤、是否必须暂停及可继续的无关工作，Creative Lead 再提醒用户自行创建、下载、升级、跳过或替换。任何 agent 都不得模拟缺失 skill 或宣称其产物已经成功。
+
 ## 9. Agent 测试合同
 
 每个核心能力至少通过：

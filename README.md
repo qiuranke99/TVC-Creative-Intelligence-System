@@ -6,7 +6,7 @@ project state.
 
 ## Current verified status
 
-The public V3 snapshot was reaccepted on `2026-07-14` with `121/121` Node tests,
+The public V3 snapshot was reaccepted on `2026-07-14` with `122/122` Node tests,
 `5/5` Runtime surfaces, `73/73` executable fixtures, `9/9` heterogeneous synthetic
 projects, and the manifest-bound standalone verifier.
 
@@ -74,6 +74,31 @@ Client Brief
 - V3-only applies to the TCIS product and architecture release line. Internal schema,
   receipt, and artifact-revision identifiers keep their own independent versions;
   mechanically renumbering those identifiers would falsify their data-contract history.
+
+## External production skills
+
+The Agent layer is complete: TCIS contains 30 capability packages, implemented as the
+main-thread Creative Lead plus 29 generated specialist Agents. Production skills are a
+different layer. They are user-managed external extensions and are intentionally not
+bundled, installed, pinned, or upgraded by TCIS.
+
+A skill is resolved only when a routed step actually needs it:
+
+1. If the listed skill is available and compatible, TCIS may invoke it within its declared
+   scope.
+2. If it is missing or incompatible, TCIS tells the user the exact skill name, why it is
+   needed, which step is affected, whether that step must pause, and what independent work
+   can continue.
+3. The user decides whether to create, download, upgrade, skip, or replace that skill.
+4. TCIS does not silently imitate a missing skill, auto-install it, or claim its expected
+   artifact has succeeded.
+
+Example:
+
+> The current step needs `scene-canon-asset-pack`, but that skill is unavailable in this
+> environment. It is needed to create a reusable scene-consistency asset. Please create,
+> download, upgrade, skip, or replace the skill. This step is paused; unrelated work may
+> continue.
 
 ## Recommended reading order
 

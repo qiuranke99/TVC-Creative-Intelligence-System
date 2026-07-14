@@ -32,7 +32,7 @@ commercial_production_readiness = NOT_PROVEN
 | Human decision loop and professional role separation | PASS |
 | Script before director treatment and conditional platform | PASS |
 | Capability packages / generated specialists / generated artifacts | 30 / 29 / 91 PASS |
-| Full Node Runtime suite | 121/121 PASS |
+| Full Node Runtime suite | 122/122 PASS |
 | Runtime validation | 5/5 PASS |
 | Executable fixtures | 73/73 PASS; 0 failed/skipped/unmapped |
 | Synthetic scenarios | 9/9 PASS |

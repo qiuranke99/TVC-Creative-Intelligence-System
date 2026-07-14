@@ -474,6 +474,8 @@ Skill 只封装稳定、重复、边界清楚、可测试的生产流程。Skill
 
 当前可以复用的 production skills 只在其声明范围内使用，例如 reference research、角色/产品/场景 identity locking、shot exploration 和 shooting rundown。TCIS 本身不是 skill；也不创建 `agent-one` 或 `tcis-mega-skill`。
 
+Production skill 是由用户自行管理的外部扩展，不随 TCIS 捆绑、自动安装、锁版本或升级。只有当已路由步骤实际需要某个 skill 时才检查当前环境；若缺失或明显不兼容，TCIS 必须告诉用户准确名称、用途、受影响步骤、该步骤是否暂停及仍可继续的无关工作，由用户自行创建、下载、升级、跳过或替换。TCIS 不模拟缺失 skill，也不把普通提示词输出冒充为该 skill 的成功产物。
+
 新 skill 只有在同一窄流程真实成功至少三次、输入/输出/失败稳定、没有与现有能力重复、且用户明确批准后才创建。
 
 ---

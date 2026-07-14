@@ -126,6 +126,13 @@ test("registry has the exact TCIS v3 portfolio and complete unique contracts", a
   const { registry } = await loadRegistry();
   validateRegistry(registry);
 
+  const missingSkillRule = registry.agent_runtime.shared_instructions.find((instruction) =>
+    instruction.includes("routed and listed skill is unavailable"),
+  );
+  assert.ok(missingSkillRule, "shared missing-skill handoff rule is absent");
+  assert.match(missingSkillRule, /do not install, create, upgrade, imitate, or claim it succeeded/);
+  assert.match(missingSkillRule, /create, download, upgrade, skip, or replace/);
+
   assert.equal(registry.capabilities.length, 30);
   assert.equal(new Set(registry.capabilities.map((item) => item.capability_id)).size, 30);
   assert.deepEqual(
@@ -276,6 +283,8 @@ test("specialist TOMLs have exact parity, read-only sandboxes, and package-only 
       new RegExp(`capabilities/${capability.capability_id}/capability\\.json`),
     );
     assert.match(content, /sole role, authority, stage, method, tool, skill/);
+    assert.match(content, /routed and listed skill is unavailable/);
+    assert.match(content, /create, download, upgrade, skip, or replace/);
   }
 
   const activeTomls = new Set(await listTomls());

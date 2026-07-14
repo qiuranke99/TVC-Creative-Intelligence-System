@@ -1,7 +1,7 @@
 {
   "schema_version": "tcis-generated-manifest.v1",
   "source": "capabilities/registry.json",
-  "registry_sha256": "743d106561d9c1ee933328b517fd629f257ea3d18b0fd3a67d62e3034c1e4aca",
+  "registry_sha256": "8dc0be1be190b366ee71af7822736cf0aa70d837a1717cbc759b01c6885a45ae",
   "custom_agent_ids": [
     "account_project_lead",
     "strategy_planning_lead",
@@ -39,119 +39,119 @@
   "generated_files": [
     {
       "path": ".codex/agents/account-project-lead.toml",
-      "sha256": "c96cc34ba7501551252bf0f45f64e9313fed43ac243efcb6cc23c1eaa58539bf"
+      "sha256": "903a572ce0c07fa4ecfe25afabfba861f1c1408de82fd308d50cde61d82d9619"
     },
     {
       "path": ".codex/agents/agency-art-director.toml",
-      "sha256": "5128463baaddb550595b9819cff2f7e04e4f45ff7f1b4ede7d23824145559fa6"
+      "sha256": "5c8bf68166de3767ad08b6bfcb8dfb4cbc959228c4f58469054aa9d3f862c734"
     },
     {
       "path": ".codex/agents/agency-producer.toml",
-      "sha256": "7f5c821d1482ffd05ed5b10b0aa4f95cf577aa2b4920f2e1f6b088ca80c79b7f"
+      "sha256": "755ae3dd2c84837f9aa0eb10f43b44e323060ed77c8bf383238f8f430fde79ba"
     },
     {
       "path": ".codex/agents/ai-generation-supervisor.toml",
-      "sha256": "8413026ce6af7593588e5927ed745534ea4a2a35058acda867da5fbbc7b06fa8"
+      "sha256": "cfb8ae8bc1f6a536d9ab47f0c084bdcb127d5673526c498278df871fbdf4b012"
     },
     {
       "path": ".codex/agents/animation-director.toml",
-      "sha256": "a36ec4507c134e4aa8e21919a6fbf02ddd121b453f661fc12c7bb3059a58f343"
+      "sha256": "6fe311cf72bb3dd286785110529d17b001bb994b06bf40016f3df40a975b99e9"
     },
     {
       "path": ".codex/agents/brand-strategist.toml",
-      "sha256": "2429a1b84d1fe7fd10ce3481ef9b80ca7380df9bbc67ab4ee53236e50b483c29"
+      "sha256": "25662125642616e7a639b284fa1ed5d619c3f6cfbd051cb5ee7ba672e1103c0a"
     },
     {
       "path": ".codex/agents/casting-lead.toml",
-      "sha256": "91d50fcf5acb8bd465f29a90040bfe2b9dd5774c7d06ad598dc1d6c85c2e9f45"
+      "sha256": "04dd69fa97fc6115d6f92343eddc8e1c4f263cfbc6086898e2cac8d557147dd9"
     },
     {
       "path": ".codex/agents/claims-rights-challenger.toml",
-      "sha256": "7a0bf41188ddb30fa346891df418ba791cc513a9f5c6a1028e01c616f37c8ecc"
+      "sha256": "25ac22d40ca3d904f26c34322c1cacfbab7668c12e8dd5f2e5f55963e2285521"
     },
     {
       "path": ".codex/agents/commercial-director.toml",
-      "sha256": "0b180fa744a443fe79b4697f9d57265b3550efb4841125ee10884563fa12dfcb"
+      "sha256": "3389985c3f30674532bc0e3cc2851d042262935e6ef2b6ace30b8adc447d77f7"
     },
     {
       "path": ".codex/agents/copywriter.toml",
-      "sha256": "51bb2b04e33e5ebbeb069666342723b6089dc6ec47ded6f24e7ceedb2394878c"
+      "sha256": "858aecd5bbe502a94a6aaf3e7fb307809e23879e475902dfe7ced679ccefc647"
     },
     {
       "path": ".codex/agents/creative-director.toml",
-      "sha256": "4db78479e316f953ea6e5f1df87b4bfecad2ac44d092af5b03ce223b712be9a3"
+      "sha256": "79beecbe8bafc475401b2afcd07a5663156de25277154a045379539f716772b3"
     },
     {
       "path": ".codex/agents/director-of-photography.toml",
-      "sha256": "ba0ec7a0cf5414bf782633acff121422db3c459699925391c391ac8623e26f4a"
+      "sha256": "b1a7c3090ff5346bf0d17b8b91fde2739a136e177ac30a0a3802c2749cf99a76"
     },
     {
       "path": ".codex/agents/editor.toml",
-      "sha256": "5302cb07182ed0d7bb0b16f152237538f87efbea7278f4ced6895f1d8988786e"
+      "sha256": "780e4e0040ce8431a6ecf0b33bed3dda80e8b7681b6ebad1cae1d105e4d6774e"
     },
     {
       "path": ".codex/agents/location-scout.toml",
-      "sha256": "bcb313809facf8647a4896927afe86991fe07a3a6c5c59c3b57add75d458101b"
+      "sha256": "9c6c9e9258bfb58e8aebbe26533f963119fb093c3b0af1034613d50b086cdd2d"
     },
     {
       "path": ".codex/agents/media-asset-strategist.toml",
-      "sha256": "88adaed1d299d74de6257ea3c883f532c9a2445b2cac11dab76cf707e776a031"
+      "sha256": "fc83e4e4e89e3f666f9aac5c0507ecfc6de35bf3f97d07ff5e856e927a0a4505"
     },
     {
       "path": ".codex/agents/memory-librarian.toml",
-      "sha256": "200ac713334ca48a7837723e7839bb1eb053bb7331c2c8c1caf4ab8ab960b4d1"
+      "sha256": "699644be5174180eab0b8f9a1a64c8fd58c795dc5d62f7f37ba95810e8ba16f7"
     },
     {
       "path": ".codex/agents/motion-designer.toml",
-      "sha256": "b58061235924590bc853cd30e77002982152531cc189d006fe5cf2680f497865"
+      "sha256": "11acae4f39cc9cd73355a550cb4a63287303c8da7845a6a79359075abc887c53"
     },
     {
       "path": ".codex/agents/music-supervisor.toml",
-      "sha256": "bce4d516ddcc5d357485186c982001150d2af3485c5dc2e0291031af4c349cd4"
+      "sha256": "b4661a4d37b6afae8e371d3d2471aa37c11e04d3678414c54ad948d0455673da"
     },
     {
       "path": ".codex/agents/post-producer.toml",
-      "sha256": "38684e987f226d1e3a17dab6086c6166ff36310c1f2cad52546fe4e7bdc5926f"
+      "sha256": "9941035331c52238bb8a8e56d5fa947f6cdaf16d89220017234ee5ae06249dc9"
     },
     {
       "path": ".codex/agents/production-company-producer.toml",
-      "sha256": "d7b965b649ab0cf40b4a803f4de6d7d5e230b36559ed0efab0879497f54d08cb"
+      "sha256": "3c5142ab25dd7eed836a3b4bc8fb3004ba8163dffbc27da3da4f360bd873f2fc"
     },
     {
       "path": ".codex/agents/production-designer.toml",
-      "sha256": "bca0a3a98c3d2f25e856b20bd0a9b1288622af03924c1d38533749be2e0fee29"
+      "sha256": "90d9892839314b3191f7d4b8045a74597d9072e25e2029d11b1651404894f715"
     },
     {
       "path": ".codex/agents/qa-red-team.toml",
-      "sha256": "d996bf543b78d3e3198b2200318c4f91109085c52c2e3caabc9a3261d01ecda2"
+      "sha256": "84263c595d4867e83be71883a5e61e1be67edc74de64582f70d71e750829d27e"
     },
     {
       "path": ".codex/agents/reference-research-service.toml",
-      "sha256": "4a89f6e2293c5df9e5867a570d3aedab1edb2c747fb15ad23be922d47972d930"
+      "sha256": "1c991e3e3226e25b9677c505958445447abed9bb4089c0c47e0bde1903de0d3f"
     },
     {
       "path": ".codex/agents/research-insight-lead.toml",
-      "sha256": "07cd9ca013d02bbe32d5ec199d1bc4961ed1f3fb8bf45ee9941708200406499b"
+      "sha256": "ecf81970e3c4f51001dd8ecdad8100c7653b6488d29a7c72c23a258fb5ed75fe"
     },
     {
       "path": ".codex/agents/sound-designer.toml",
-      "sha256": "536623a53d9a8870cfdd5909c21d748322d7fa63f0707354cebd41764faf0fa0"
+      "sha256": "d2df983a80d0387a31c8396217a91976c7e701916ccfd569e33699d386df29b1"
     },
     {
       "path": ".codex/agents/strategy-planning-lead.toml",
-      "sha256": "4a7424170625a4ce0750f5ec6f99391c7f49c97b56357e913f5a6478c258a3c0"
+      "sha256": "bcacf67188a08d32b8874bb04133f10432c4ba8ea47605191bd978b30dda3445"
     },
     {
       "path": ".codex/agents/vfx-supervisor.toml",
-      "sha256": "ddb359a5974ec3b04b1e91f62de75e713e6cf3b84bcf24259ccfff7d08d5bffa"
+      "sha256": "5e7a65c7709799ee843853235d02dca76ab24ae5f80022c07436877c76fe99d1"
     },
     {
       "path": ".codex/agents/visual-development-lead.toml",
-      "sha256": "f195a40625044da7e86d6a357741980fa1e1c35b517d81a2e98eaac97b5da870"
+      "sha256": "4f92f084f91796e502ac7995f5256af520f99325b158a424c092330d9348391f"
     },
     {
       "path": ".codex/agents/wardrobe-hmu.toml",
-      "sha256": "c9e82babf42d2bd65d85fde8d76390ba07585c0303ccd59189626d9f55892a4c"
+      "sha256": "ae471cc0ae5ea7dadeb94a941890ce16a77bf34975a1b637acf69646a823b08b"
     },
     {
       "path": "capabilities/account_project_lead/capability.json",

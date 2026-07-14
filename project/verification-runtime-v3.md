@@ -23,15 +23,15 @@ This record supersedes the 2026-07-11 local receipt for the current package snap
 | Check | Current result |
 |---|---|
 | Test preflight | PASS; required executable test surfaces present |
-| Full Node suite | 121/121 PASS |
+| Full Node suite | 122/122 PASS |
 | Store behavior validation | create/load/mutate/integrity/tamper/cleanup PASS |
 | Runtime validation | 5/5 surfaces PASS |
 | Capability projection | 30 packages / 29 specialist TOMLs / 91 generated artifacts PASS |
 | Executable fixtures | 73/73 PASS; 0 failed/skipped/unmapped |
 | Heterogeneous synthetic projects | 9/9 PASS |
 | Static standalone verifier | 21/21 PASS before manifest gate |
-| Root/canonical architecture | byte-identical; SHA-256 `ec9cabfc61d028da8d5de2e14659a9d2446541a7c88b4e0b557d169926b335a2` |
-| Final package manifest/verifier | `170` entries; 22/22 PASS |
+| Root/canonical architecture | byte-identical; SHA-256 `abaeb8be91a7f8f9c5ead20557319cb5ac6415ec97521241d774bd9f0803e58c` |
+| Final package manifest/verifier | `171` entries; 22/22 PASS |
 
 ## Root Repairs Accepted
 

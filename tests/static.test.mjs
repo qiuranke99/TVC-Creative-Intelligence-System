@@ -54,6 +54,25 @@ test('public package contains no superseded TCIS release files or release claims
   }
 });
 
+test('public contracts explain user-managed skills and fail visibly when one is missing', async () => {
+  const [agents, readme, decisions, architecture] = await Promise.all([
+    readFile(path.join(root, 'AGENTS.md'), 'utf8'),
+    readFile(path.join(root, 'README.md'), 'utf8'),
+    readFile(path.join(root, 'project', 'decisions.md'), 'utf8'),
+    readFile(path.join(root, 'TCIS-v3-专业TVC总架构.md'), 'utf8'),
+  ]);
+
+  assert.match(agents, /Production skills are user-managed external extensions/);
+  assert.match(agents, /exact\s+skill name, why it is needed, the affected step/);
+  assert.match(agents, /Pause only\s+the dependent step/);
+  assert.match(readme, /main-thread Creative Lead plus 29 generated\s+specialist Agents/);
+  assert.match(readme, /create, download, upgrade, skip, or replace/);
+  assert.match(readme, /does not silently imitate a missing skill/);
+  assert.match(decisions, /Production skills are user-managed external extensions/);
+  assert.match(architecture, /不随 TCIS 捆绑、自动安装、锁版本或升级/);
+  assert.match(architecture, /不模拟缺失 skill/);
+});
+
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const files = [];

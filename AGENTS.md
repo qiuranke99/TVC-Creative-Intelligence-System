@@ -26,7 +26,7 @@ not be added to the public package or manifest.
 
 ## Current Status
 
-Current-snapshot reacceptance date: `2026-07-14`. Evidence: `121/121` Node tests,
+Current-snapshot reacceptance date: `2026-07-14`. Evidence: `122/122` Node tests,
 `5/5` Runtime surfaces, `73/73` fixtures, `9/9` synthetic projects, and the
 manifest-bound standalone verifier.
 
@@ -103,6 +103,16 @@ the minimized disclosure.
   director skill, or retired-workflow skill.
 - A new production skill requires at least three real successful repetitions, stable scope
   and failures, no duplication, and explicit user approval.
+- Production skills are user-managed external extensions, not bundled TCIS components.
+  Their absence does not make the 30-capability / 29-specialist-agent architecture
+  incomplete.
+- When a routed step requires a listed skill that is missing or evidently incompatible,
+  do not install, create, upgrade, imitate, or silently replace it. Tell the user the exact
+  skill name, why it is needed, the affected step, whether that step must pause, and which
+  independent work can continue. The user decides whether to create, download, upgrade,
+  skip, or replace the skill.
+- Never claim the missing skill's artifact or verification result succeeded. Pause only
+  the dependent step; continue unrelated work when it remains valid.
 
 ## State And Change Discipline
 
@@ -134,5 +144,5 @@ the minimized disclosure.
 - Any fatal role-authority error, unsupported claim promotion, cross-client contamination,
   silent human-decision bypass, or fake media success is non-compensable NO-GO.
 
-The `121/121`, `5/5`, `73/73`, `9/9`, and manifest-bound verifier results are L0-L3
+The `122/122`, `5/5`, `73/73`, `9/9`, and manifest-bound verifier results are L0-L3
 evidence only and do not promote any L4-L6 state.

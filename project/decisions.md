@@ -1,5 +1,17 @@
 # TCIS V3 Decisions
 
+## 2026-07-14 - Production skills are user-managed external extensions
+
+- Decision: the 30-capability architecture is complete without bundling production
+  skills. Skills listed by capability packages are resolved only when a routed step needs
+  them and remain under the user's installation, creation, update, and compatibility
+  control.
+- Missing-skill behavior: identify the exact skill, purpose, affected step, whether that
+  step must pause, and which independent work can continue; then let the user create,
+  download, upgrade, skip, or replace it.
+- Boundary: TCIS does not bundle, auto-install, pin, upgrade, imitate, or silently replace
+  a missing skill and never claims its expected artifact succeeded.
+
 ## 2026-07-14 - Public repository is a V3-only product surface
 
 - Decision: publish the repository as `TVC-Creative-Intelligence-System` with only the

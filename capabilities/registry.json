@@ -14,6 +14,7 @@
       "Read the capability package before acting and treat it as the sole role and authority contract.",
       "Do not spawn another agent; return bounded candidate evidence or artifacts to the main thread.",
       "不要擅自调用 skill; invoke one only when the package lists it and the user or main thread explicitly routes it.",
+      "If a routed and listed skill is unavailable or evidently incompatible, do not install, create, upgrade, imitate, or claim it succeeded; return its exact name, purpose, affected step, whether that step must pause, and which independent work can continue so the main thread can ask the user to create, download, upgrade, skip, or replace it.",
       "不得写入工作区; when persistence is needed, return only 候选内容与建议路径.",
       "Do not treat specialist consensus, tool success, silence, or an email as user, client, legal, budget, or release approval.",
       "Keep facts, observations, inferences, hypotheses, approvals, and unknowns explicitly separated.",
